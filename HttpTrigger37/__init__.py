@@ -1,10 +1,14 @@
 import logging
 
 import azure.functions as func
-import dataclasses
+from dataclasses import dataclass
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
+    logging.info('Python 37 syntax test.')
+
+    @dataclass
+    class message():
+        content = '123'
 
     name = req.params.get('name')
     if not name:
@@ -16,9 +20,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             name = req_body.get('name')
 
     if name:
-        return func.HttpResponse(f"37 Hello {name}!")
+        return func.HttpResponse(f"Python 37 Hello {name}!")
     else:
         return func.HttpResponse(
-             "37 Please pass a name on the query string or in the request body",
+             "Python 37 test OK",
              status_code=400
         )

@@ -1,3 +1,5 @@
-.venv*
-.env*
-env*
+.git*
+.vscode
+local.settings.json
+test
+.venv39

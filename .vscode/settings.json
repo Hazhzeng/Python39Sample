@@ -1,0 +1,9 @@
+{
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv39",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~3",
+    "azureFunctions.showHiddenStacks": true,
+    "debug.internalConsoleOptions": "neverOpen"
+}

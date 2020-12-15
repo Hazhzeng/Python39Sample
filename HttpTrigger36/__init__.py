@@ -4,7 +4,7 @@ import azure.functions as func
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info('Python HTTP trigger function processed a request.')
+    logging.info('Python 36 syntax test.')
 
     name = req.params.get('name')
     if not name:
@@ -16,9 +16,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             name = req_body.get('name')
 
     if name:
-        return func.HttpResponse(f"Hello {name}!")
+        return func.HttpResponse(f"Python 36 Hello {name}!")
     else:
         return func.HttpResponse(
-             "36 Please pass a name on the query string or in the request body",
+             "Python 36 test OK",
              status_code=400
         )
